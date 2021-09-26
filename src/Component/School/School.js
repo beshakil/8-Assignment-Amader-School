@@ -7,7 +7,7 @@ const School = (props) => {
     const element = <FontAwesomeIcon icon={faGlobeAmericas} />
     const elementTwo = <FontAwesomeIcon icon={faEnvelopeOpenText} />
 
-    const { shoolName, location, totalStudent, eventStudent, img } = props.school;
+    const { shoolName, location, totalStudent, eventStudent, img, schoolNumber } = props.school;
 
     return (
         <div className="col-lg-4 gy-3">
@@ -19,6 +19,7 @@ const School = (props) => {
                     <h5 className="card-text pt-2 text-success">লোকেশনঃ <small className="text-dark">{location}</small ></h5>
                     <h5 className="card-text pt-2 text-success">মোট শিক্ষার্থীঃ <small className="text-dark">{totalStudent} জন</small> </h5>
                     <h5 className="card-text pt-2 text-success">অংশগ্রহণকারী শিক্ষার্থীঃ <small className="text-dark">{eventStudent} জন</small></h5>
+                    <h5 className="card-text pt-2 text-success">মোবাইলঃ <small className="text-dark">{schoolNumber}</small></h5>
 
                     <div className="d-flex justify-content-between">
                         <button className="btn btn-outline-danger mt-3" onClick={() => props.handleParticipant(props.school)}>অনুষ্ঠানে অংশগ্রহণ</button>

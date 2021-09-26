@@ -1,9 +1,10 @@
 import React from 'react';
+import SelectSchool from '../SelectSchool/SelectSchool';
 
 const Participant = (props) => {
     const { participant } = props;
     let total = 0;
-
+    //Total calculating
     for (const school of participant) {
         total = total + school.eventStudent;
     }
@@ -13,6 +14,15 @@ const Participant = (props) => {
                 <div className="p-3">
                     <h4>মোট স্কুলঃ {props.participant.length}</h4>
                     <h4 className="pt-3">মোট শিক্ষার্থীঃ {total}</h4>
+                    <div>
+                        {
+                            participant.map(selectSchool => <SelectSchool
+                                key={selectSchool.key}
+                                selectSchool={selectSchool}
+                            >
+                            </SelectSchool>)
+                        }
+                    </div>
                 </div>
             </div>
 
